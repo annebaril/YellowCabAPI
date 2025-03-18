@@ -1,10 +1,10 @@
 import streamlit as st 
 import requests
 import os
-import loguru
+#import loguru
 
-BACKEND_URL = os.getenv("BACKEND_URL")
-loguru.logger.info(f'BACKEND_URL: {BACKEND_URL}')
+#BACKEND_URL = os.getenv("BACKEND_URL")
+#loguru.logger.info(f'BACKEND_URL: {BACKEND_URL}')
 
 st.markdown("# Yellowcab Prediction")
 st.markdown("### Predict the duration of the rip")
@@ -47,8 +47,8 @@ data = {"VendorID": VendorID,
         "airport_fee": airport_fee}
 
 if st.button("Predict"):
-    url = BACKEND_URL + "predict_get/"
-    loguru.logger.info(f'BACKEND_URL: {BACKEND_URL}')
-    response = requests.get(url, params = data) 
+    url = "https://yellowcapapi-609285842864.europe-west9.run.app/" + "predict_get/"
+    #loguru.logger.info(f'BACKEND_URL: {BACKEND_URL}')
+    response = requests.get(url, params=data) 
     result = response.json()
     st.markdown(f"Predicted duration of the trip is {result}")
