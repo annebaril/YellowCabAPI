@@ -25,7 +25,7 @@ data = {
 
 
 
-
+url = "https://yellowcapapi-609285842864.europe-west9.run.app/" + "predict_get/"
 response = requests.get(url, params = data) 
 result = response.json()
 print(result)
