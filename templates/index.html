@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Données</title>
+</head>
+
+<body>
+    <h2>Fournissez les informations</h2>
+    <form id="dataForm" method="post" action="/pred/">
+        <label for="VendorID">VendorID:</label>
+        <input type="number" id="VendorID" name="VendorID" value=1 required><br>
+
+        <label for="passenger_count">Passenger Count:</label>
+        <input type="number" id="passenger_counmt" name="passenger_count" value=1 required><br>
+
+        <label for="trip_distance">Trip Distance:</label>
+        <input type="number" step="0.1" id="trip_distance" name="trip_distance" value=2.1 required><br>
+
+        <label for="RatecodeID">RatecodeID:</label>
+        <input type="number" id="RatecodeID" name="RatecodeID" value=1 required><br>
+
+        <label for="store_and_fwd_flag">Store and Fwd Flag:</label>
+        <input type="text" id="store_and_fwd_flag" name="store_and_fwd_flag" value="N" required><br>
+
+        <label for="PULocationID">Pickup Location ID:</label>
+        <input type="number" id="PULocationID" name="PULocationID" value=142 required><br>
+
+        <label for="DOLocationID">Dropoff Location ID:</label>
+        <input type="number" id="DOLocationID" name="DOLocationID" value=43 required><br>
+
+        <label for="payment_type">Payment Type:</label>
+        <input type="number" id="payment_type" name="payment_type" value=2 required><br>
+
+        <label for="fare_amount">Fare Amount:</label>
+        <input type="number" step="0.1" id="fare_amount" name="fare_amount" value=8 required><br>
+
+        <label for="extra">Extra:</label>
+        <input type="number" step="0.1" id="extra" name="extra" value=3 required><br>
+
+        <label for="mta_tax">MTA Tax:</label>
+        <input type="number" step="0.1" id="mta_tax" name="mta_tax" value=0.5 required><br>
+
+        <label for="tip_amount">Tip Amount:</label>
+        <input type="number" step="0.1" id="tip_amount" name="tip_amount" value=0 required><br>
+
+        <label for="tolls_amount">Tolls Amount:</label>
+        <input type="number" step="0.1" id="tolls_amount" name="tolls_amount" value=0 required><br>
+
+        <label for="improvement_surcharge">Improvement Surcharge:</label>
+        <input type="number" step="0.1" id="improvement_surcharge" name="improvement_surcharge" value=0.3 required><br>
+
+        <label for="total_amount">Total Amount:</label>
+        <input type="number" step="0.1" id="total_amount" name="total_amount" value=11.8 required><br>
+
+        <label for="congestion_surcharge">Congestion Surcharge:</label>
+        <input type="number" step="0.1" id="congestion_surcharge" name="congestion_surcharge" value=2.5 required><br>
+
+        <label for="airport_fee">Airport Fee:</label>
+        <input type="number" step="0.1" id="airport_fee" name="airport_fee" value=0 required><br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    {% if result %}
+    <h3>Résultat du modèle : {{ result }}</h3>
+    {% endif %}
+
+</body>
+
+</html>

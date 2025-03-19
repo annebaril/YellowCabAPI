@@ -7,7 +7,7 @@ import os
 #loguru.logger.info(f'BACKEND_URL: {BACKEND_URL}')
 
 st.markdown("# Yellowcab Prediction")
-st.markdown("### Predict the duration of the rip")
+st.markdown("### Predict the duration of the trip")
 st.markdown("#### Input the following details to predict the duration of the trip")
 
 VendorID = st.number_input("VendorID", value=1)
